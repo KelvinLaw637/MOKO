@@ -15,6 +15,12 @@
 		402EBBF114025FC9003B463A /* egopv_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 402EBBF014025FC9003B463A /* egopv_photo.png */; };
 		40EE5E1614035C6E0010F56A /* Moko.icns in Resources */ = {isa = PBXBuildFile; fileRef = 40EE5E1514035C6E0010F56A /* Moko.icns */; };
 		40EE5E18140367090010F56A /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 40EE5E17140367090010F56A /* clear.png */; };
+		40F39C961404882300982592 /* Illustration.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C951404882300982592 /* Illustration.jpg */; };
+		40F39C981404883500982592 /* Music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C971404883500982592 /* Music.jpg */; };
+		40F39C9A1404884200982592 /* Movie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C991404884200982592 /* Movie.jpg */; };
+		40F39C9C1404885A00982592 /* Media.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C9B1404885A00982592 /* Media.jpg */; };
+		40F39C9E1404886600982592 /* Arts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C9D1404886600982592 /* Arts.jpg */; };
+		40F39CA01404887000982592 /* More.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40F39C9F1404887000982592 /* More.jpg */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -57,6 +63,12 @@
 		402EBBF014025FC9003B463A /* egopv_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egopv_photo.png; sourceTree = "<group>"; };
 		40EE5E1514035C6E0010F56A /* Moko.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Moko.icns; sourceTree = "<group>"; };
 		40EE5E17140367090010F56A /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		40F39C951404882300982592 /* Illustration.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Illustration.jpg; sourceTree = "<group>"; };
+		40F39C971404883500982592 /* Music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Music.jpg; sourceTree = "<group>"; };
+		40F39C991404884200982592 /* Movie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Movie.jpg; sourceTree = "<group>"; };
+		40F39C9B1404885A00982592 /* Media.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Media.jpg; sourceTree = "<group>"; };
+		40F39C9D1404886600982592 /* Arts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Arts.jpg; sourceTree = "<group>"; };
+		40F39C9F1404887000982592 /* More.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = More.jpg; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MoKo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MoKo-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MoKo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoKo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8527D5413C09DE90088F8CF /* btn_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_right.png; sourceTree = "<group>"; };
@@ -198,6 +210,12 @@
 		B8D3887D13C0001600EF8E37 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				40F39C9F1404887000982592 /* More.jpg */,
+				40F39C9D1404886600982592 /* Arts.jpg */,
+				40F39C9B1404885A00982592 /* Media.jpg */,
+				40F39C991404884200982592 /* Movie.jpg */,
+				40F39C971404883500982592 /* Music.jpg */,
+				40F39C951404882300982592 /* Illustration.jpg */,
 				40EE5E17140367090010F56A /* clear.png */,
 				40EE5E1514035C6E0010F56A /* Moko.icns */,
 				402EBBF014025FC9003B463A /* egopv_photo.png */,
@@ -318,6 +336,12 @@
 				402EBBF114025FC9003B463A /* egopv_photo.png in Resources */,
 				40EE5E1614035C6E0010F56A /* Moko.icns in Resources */,
 				40EE5E18140367090010F56A /* clear.png in Resources */,
+				40F39C961404882300982592 /* Illustration.jpg in Resources */,
+				40F39C981404883500982592 /* Music.jpg in Resources */,
+				40F39C9A1404884200982592 /* Movie.jpg in Resources */,
+				40F39C9C1404885A00982592 /* Media.jpg in Resources */,
+				40F39C9E1404886600982592 /* Arts.jpg in Resources */,
+				40F39CA01404887000982592 /* More.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +430,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -418,7 +442,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};

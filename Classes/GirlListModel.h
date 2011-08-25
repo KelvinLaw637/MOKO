@@ -15,9 +15,15 @@
 #import "TFHpple.h"
 
 enum GroupKind {
-    kGroupKindDesign,
+    kGroupKindDesign=0,
 	kGroupKindModel,
-	kGroupKindActor
+	kGroupKindActor,
+    kGroupKindIllustration,
+    kGroupKindMusic,
+    kGroupKindMovie,
+    kGroupKindMedia,
+    kGroupKindArts,
+    kGroupKindMore
 };
 typedef NSInteger NSGroupKind;
 
@@ -25,7 +31,13 @@ typedef NSInteger NSGroupKind;
 static NSString* const urlAddress[]={
 	@"http://www.moko.cc/channels/second/post/28/3/1.html",
 	@"http://www.moko.cc/channels/second/post/23/3/1.html",
-	@"http://www.moko.cc/channels/second/post/143/3/1.html"
+	@"http://www.moko.cc/channels/second/post/143/3/1.html",
+    @"http://www.moko.cc/channels/second/post/41/2/1.html",
+    @"http://www.moko.cc/channels/second/post/13/3/1.html",
+    @"http://www.moko.cc/channels/second/post/1/3/1.html",
+    @"http://www.moko.cc/channels/second/post/53/3/1.html",
+    @"http://www.moko.cc/channels/second/post/71/3/1.html",
+    @"http://www.moko.cc/channels/second/post/94/3/1.html"
 };
 
 @protocol GirlListModelDelegate;

@@ -35,6 +35,8 @@
 	DownLoadData *photoDown;              //用来下载图片的
 }
 
+- (IBAction)kindClick:(id)sender;
+
 - (IBAction)modelClick:(id)sender;
 - (IBAction)designClick:(id)sender;
 - (IBAction)actorClick:(id)sender;

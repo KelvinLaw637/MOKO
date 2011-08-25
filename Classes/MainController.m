@@ -24,12 +24,12 @@
 - (id)init{
 	self=[super init];
 	if (self) {
-		designListModel=[[GirlListModel alloc] initWithKind:0];
-		modelListModel=[[GirlListModel alloc] initWithKind:1];
-		actorListModel=[[GirlListModel alloc] initWithKind:2];
-		modelListModel.delegate=self;
-		designListModel.delegate=self;
-		actorListModel.delegate=self;
+//		designListModel=[[GirlListModel alloc] initWithKind:0];
+//		modelListModel=[[GirlListModel alloc] initWithKind:1];
+//		actorListModel=[[GirlListModel alloc] initWithKind:2];
+//		modelListModel.delegate=self;
+//		designListModel.delegate=self;
+//		actorListModel.delegate=self;
 		
 		allListInfoDic=[[NSMutableDictionary alloc] init];
 	}
@@ -62,6 +62,74 @@
     
     NSString *pageString=[NSString stringWithFormat:@"%2d/%2d",photoIndex+1,[photoArray count]];
     [pageField setStringValue:pageString];
+}
+
+- (IBAction)kindClick:(id)sender
+{
+    NSToolbarItem *item=(NSToolbarItem*)sender;
+    GirlListModel *list=nil;
+    switch (item.tag-100) {
+        case kGroupKindDesign:
+        {
+            groupIndex=kGroupKindDesign;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindDesign];
+            break; 
+        }   
+        case kGroupKindModel:
+        {
+            groupIndex=kGroupKindModel;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindModel];
+            break; 
+        }
+        case kGroupKindActor:
+        {
+            groupIndex=kGroupKindActor;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindActor];
+            break; 
+        }
+        case kGroupKindIllustration:
+        {
+            groupIndex=kGroupKindIllustration;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindIllustration];
+            break; 
+        }
+        case kGroupKindMusic:
+        {
+            groupIndex=kGroupKindMusic;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindMusic];
+            break; 
+        }
+        case kGroupKindMovie:
+        {
+            groupIndex=kGroupKindMovie;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindMovie];
+            break; 
+        }
+        case kGroupKindMedia:
+        {
+            groupIndex=kGroupKindMedia;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindMedia];
+            break; 
+        }
+        case kGroupKindArts:
+        {
+            groupIndex=kGroupKindArts;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindArts];
+            break; 
+        }
+        case kGroupKindMore:
+        {
+            groupIndex=kGroupKindMore;
+            list=[[GirlListModel alloc] initWithKind:kGroupKindMore];
+            break; 
+        }
+        default:
+            break;
+    }
+    list.delegate=self;
+    
+    [girlTableView reloadData];
+    [girlTableView deselectAll:nil];
 }
 
 - (IBAction)designClick:(id)sender{
