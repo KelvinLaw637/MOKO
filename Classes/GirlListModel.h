@@ -52,6 +52,7 @@ static NSString* const urlAddress[]={
 	NSMutableArray *jobArray;
 }
 @property (nonatomic, assign) id<GirlListModelDelegate> delegate;
+@property (nonatomic, assign) NSGroupKind theKind;
 
 @property (nonatomic, readonly) NSMutableArray *urlArray;
 @property (nonatomic, readonly) NSMutableArray *imgArray;
@@ -64,7 +65,10 @@ static NSString* const urlAddress[]={
 
 @protocol GirlListModelDelegate<NSObject>
 
-- (void)girlListRefreshFinish:(NSMutableDictionary *)girlDic withKind:(NSGroupKind)kind;
-- (void)girlListRefreshFailWithError:(NSError *)error withKind:(NSGroupKind)kind;
+- (void)girlListRefreshFinish:(GirlListModel *)listModel withInfo:(NSDictionary *)girlDic;
+- (void)girlListRefreshFail:(GirlListModel *)listModel withError:(NSError *)error;
+
+//- (void)girlListRefreshFinish:(NSMutableDictionary *)girlDic withKind:(NSGroupKind)kind;
+//- (void)girlListRefreshFailWithError:(NSError *)error withKind:(NSGroupKind)kind;
 
 @end

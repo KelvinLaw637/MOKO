@@ -19,19 +19,15 @@
     IBOutlet NSImageView *photoImgView;
     IBOutlet NSTextField *pageField;
 	
-	NSInteger groupIndex;                     //大类的index
+	NSInteger groupIndex;                     //大类的index	
+	NSMutableDictionary *allListInfoDic;      //所有列表中的信息
 	
-	GirlListModel *designListModel;         //”摄影造型“模块数据模型
-	GirlListModel *modelListModel;          //“模特儿”模块数据的模型
-	GirlListModel *actorListModel;          //"演员主持"模块数据的模型
+    NSMutableArray *lists;                  //用来存储版块的信息
 	
-	NSMutableDictionary *allListInfoDic;    //所有列表中的信息	
-	
-	NSArray *photoArray;                  //相册的相片
+	NSArray *photoArray;                   //相册的相片
 	NSUInteger photoIndex;                 //当前相册是第几张
     
 	PhotoListModel *photoList;            //用来下载某位模特图册列表
-	
 	DownLoadData *photoDown;              //用来下载图片的
 }
 

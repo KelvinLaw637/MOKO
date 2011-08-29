@@ -10,6 +10,7 @@
 
 @implementation GirlListModel
 @synthesize delegate;
+@synthesize theKind;
 
 @synthesize urlArray;
 @synthesize imgArray;
@@ -66,14 +67,14 @@
 	
 	NSMutableDictionary *girlDic=[[[NSMutableDictionary alloc] initWithObjectsAndKeys:urlArray,@"url",
                                    imgArray,@"img",nameArray,@"name",jobArray,@"job",nil] autorelease];
-	if ([delegate respondsToSelector:@selector(girlListRefreshFinish:withKind:)]) {
-		[delegate girlListRefreshFinish:girlDic withKind:theKind];
+	if ([delegate respondsToSelector:@selector(girlListRefreshFinish:withInfo:)]) {
+		[delegate girlListRefreshFinish:self withInfo:girlDic];
 	}
 }
 - (void)webDataManager:(SDWebDataManager *)dataManager didFailWithError:(NSError *)error
 {
-    if ([delegate respondsToSelector:@selector(girlListRefreshFailWithError:withKind:)]) {
-        [delegate girlListRefreshFailWithError:error withKind:theKind];
+    if ([delegate respondsToSelector:@selector(girlListRefreshFail:withError:)]) {
+        [delegate girlListRefreshFail:self withError:error];
     }
 }
 

@@ -23,29 +23,17 @@
 
 - (id)init{
 	self=[super init];
-	if (self) {
-//		designListModel=[[GirlListModel alloc] initWithKind:0];
-//		modelListModel=[[GirlListModel alloc] initWithKind:1];
-//		actorListModel=[[GirlListModel alloc] initWithKind:2];
-//		modelListModel.delegate=self;
-//		designListModel.delegate=self;
-//		actorListModel.delegate=self;
-		
+	if (self) {	
 		allListInfoDic=[[NSMutableDictionary alloc] init];
+        lists=[[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
 - (void)dealloc{
-	modelListModel.delegate=nil;
-	designListModel.delegate=nil;
-    actorListModel.delegate=nil;
-	[modelListModel release];
-	[designListModel release];
-	[actorListModel release];
-	
 	[allListInfoDic release];
-	
+	[lists release];
+    
 	[super dealloc];
 }
 
@@ -54,14 +42,22 @@
 
 - (void)photoShow
 {
-    NSString *imgUrlString=[self.photoArray objectAtIndex:photoIndex];
-    NSURL *imgUrl=[NSURL URLWithString:imgUrlString];
-    
-    NSImage *temImg=[NSImage imageNamed:@"egopv_photo.png"];
-    [photoImgView setImageWithURL:imgUrl refreshCache:NO placeholderImage:temImg];
-    
-    NSString *pageString=[NSString stringWithFormat:@"%2d/%2d",photoIndex+1,[photoArray count]];
-    [pageField setStringValue:pageString];
+    if ([self.photoArray count]>photoIndex) 
+    {
+        NSString *imgUrlString=[self.photoArray objectAtIndex:photoIndex];
+        NSURL *imgUrl=[NSURL URLWithString:imgUrlString];
+        
+        NSImage *temImg=[NSImage imageNamed:@"egopv_photo.png"];
+        [photoImgView setImageWithURL:imgUrl refreshCache:NO placeholderImage:temImg];
+        
+        NSString *pageString=[NSString stringWithFormat:@"%2d/%2d",photoIndex+1,[photoArray count]];
+        [pageField setStringValue:pageString];
+    }
+    else
+    {
+        [photoImgView setImage:nil];
+        [pageField setStringValue:@"该相册为空"];
+    }
 }
 
 - (IBAction)kindClick:(id)sender
@@ -127,6 +123,9 @@
             break;
     }
     list.delegate=self;
+    
+    [lists addObject:list];
+    [list release];
     
     [girlTableView reloadData];
     [girlTableView deselectAll:nil];
@@ -254,13 +253,15 @@
 #pragma mark -
 #pragma mark GirlListModelDelegate
 
-- (void)girlListRefreshFinish:(NSMutableDictionary *)girlDic withKind:(NSGroupKind)kind{
-	[allListInfoDic setObject:girlDic forKey:[NSString stringWithFormat:@"%d",kind]];
+- (void)girlListRefreshFinish:(GirlListModel *)listModel withInfo:(NSDictionary *)girlDic{
+	[allListInfoDic setObject:girlDic forKey:[NSString stringWithFormat:@"%d",listModel.theKind]];
 	[girlTableView reloadData];
+    [lists removeObject:listModel];
 }
 
-- (void)girlListRefreshFailWithError:(NSError *)error withKind:(NSGroupKind)kind{
-	NSAssert(error==nil,@"第<%d>无法访问，错误信息:%@",kind,error);
+- (void)girlListRefreshFail:(GirlListModel *)listModel withError:(NSError *)error{
+	NSAssert(error==nil,@"第<%d>无法访问，错误信息:%@",listModel.theKind,error);
+    [lists removeObject:listModel];
 }
 
 #pragma mark -

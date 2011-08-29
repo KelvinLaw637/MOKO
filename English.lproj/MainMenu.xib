@@ -1669,23 +1669,23 @@
 							</object>
 						</object>
 					</object>
-					<object class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<object class="NSArray" key="NSToolbarIBAllowedItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="580583327"/>
 						<reference ref="1014679332"/>
 						<reference ref="578970366"/>
 						<reference ref="397863915"/>
 						<reference ref="230076394"/>
-						<reference ref="466955708"/>
-						<reference ref="472728003"/>
 						<reference ref="544122738"/>
 						<reference ref="640610589"/>
 						<reference ref="55761092"/>
 						<reference ref="544955613"/>
 						<reference ref="608356301"/>
 						<reference ref="157118015"/>
+						<reference ref="466955708"/>
+						<reference ref="472728003"/>
 					</object>
-					<object class="NSArray" key="NSToolbarIBDefaultItems">
+					<object class="NSMutableArray" key="NSToolbarIBDefaultItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="1014679332"/>
 						<reference ref="578970366"/>
@@ -1966,7 +1966,7 @@
 								<object class="NSTextField" id="771100979">
 									<reference key="NSNextResponder" ref="548587286"/>
 									<int key="NSvFlags">301</int>
-									<string key="NSFrame">{{17, 12}, {47, 17}}</string>
+									<string key="NSFrame">{{8, 12}, {77, 17}}</string>
 									<reference key="NSSuperview" ref="548587286"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="913828661"/>
@@ -2133,7 +2133,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{93, 353}, {66, 17}}</string>
 							<reference key="NSSuperview" ref="1005106601"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="793177338"/>
 							<string key="NSReuseIdentifierKey">_NS:3936</string>
 							<bool key="NSEnabled">YES</bool>
@@ -2157,7 +2156,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 20}, {236, 325}}</string>
 							<reference key="NSSuperview" ref="1005106601"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:3580</string>
 							<bool key="NSEnabled">YES</bool>
@@ -2185,7 +2183,6 @@ bQo</string>
 					</object>
 					<string key="NSFrameSize">{276, 383}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="955357805"/>
 					<string key="NSReuseIdentifierKey">_NS:2837</string>
 				</object>
@@ -4553,11 +4550,17 @@ bQo</string>
 					<string>616.IBPluginDependency</string>
 					<string>618.IBPluginDependency</string>
 					<string>623.IBPluginDependency</string>
+					<string>623.toolbarItem.selectable</string>
 					<string>624.IBPluginDependency</string>
+					<string>624.toolbarItem.selectable</string>
 					<string>625.IBPluginDependency</string>
+					<string>625.toolbarItem.selectable</string>
 					<string>626.IBPluginDependency</string>
+					<string>626.toolbarItem.selectable</string>
 					<string>627.IBPluginDependency</string>
+					<string>627.toolbarItem.selectable</string>
 					<string>633.IBPluginDependency</string>
+					<string>633.toolbarItem.selectable</string>
 					<string>72.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
@@ -4756,11 +4759,17 @@ bQo</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
